@@ -1,3 +1,4 @@
+"use strict";
 const ROCK = "rock";
 const PAPER = "paper";
 const SCISSORS = "scissors";
@@ -36,9 +37,16 @@ function useGameLogic(firstHand, secondHand) {
 	return HANDS[winnerHandIndex];
 }
 
-function playRound() {
-	const playerSelection = getPlayerHand();
-	const computerSelection = getComputerHand();
+function playRound(...args) {
+	let playerSelection, computerSelection;
+	if (arguments.length === 0) {
+		playerSelection = getPlayerHand();
+		computerSelection = getComputerHand();
+	} else {
+		playerSelection = args[0];
+		computerSelection = args[1];
+	}
+
 	const roundResult = useGameLogic(playerSelection, computerSelection);
 	let roundScore = { PLAYER: 0, COMPUTER: 0 };
 	let winner = "Tie";
@@ -79,4 +87,27 @@ function playGame() {
 	gameScore.PLAYER > gameScore.COMPUTER
 		? console.log("Winner--------------------------")
 		: console.log("Looser--------------------------");
+}
+
+function computeGameStatistics(numberOfRounds) {
+	let gameScore = { PLAYER: 0, COMPUTER: 0 };
+	if (
+		!Number.isInteger(Number(numberOfRounds)) ||
+		Number(numberOfRounds) === 0
+	) {
+		console.log(typeof numberOfRounds);
+		throw "The number of rounds should be a number greater then zero";
+	}
+	for (let i = 0; i < numberOfRounds; i++) {
+		const roundScore = playRound(generateRandomHand(), generateRandomHand());
+		gameScore.PLAYER += roundScore.PLAYER;
+		gameScore.COMPUTER += roundScore.COMPUTER;
+	}
+	console.log(
+		"player score: " +
+			gameScore.PLAYER +
+			" vs " +
+			gameScore.COMPUTER +
+			" :computer score"
+	);
 }

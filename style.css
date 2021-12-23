@@ -1,0 +1,21 @@
+body {
+	margin: 0%;
+	padding: 0%;
+	height: 100vh;
+	width: 100vw;
+}
+body {
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+img {
+	height: 100px;
+	width: 100px;
+	transition: transform 20s linear;
+}
+img:hover {
+	transform: rotate(3600deg);
+}

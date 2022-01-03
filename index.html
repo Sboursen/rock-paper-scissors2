@@ -7,11 +7,54 @@
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="/resources/favicone.png"
+		type="image/x-icon">
 	<title>Rock Paper Scissors</title>
 </head>
 
 <body>
-	<img src="/resources/wheel.svg" alt="">
+	<div class="playground">
+		<main>
+			<div class="computer-side">
+				<div class="name">FORTUNA</div>
+				<div class="wheel">
+					<img src="resources/wheel.svg" alt="Fortuna">
+				</div>
+			</div>
+
+			<div class="player-side">
+				<div class="player-controls">
+					<div class="paper">
+						<img src="resources/paper-play.svg" alt="PAPER">
+					</div>
+					<div class="scissors">
+						<img src="resources/scissors-play.svg"
+							alt="Scissors">
+					</div>
+					<div class="rock">
+						<img src="resources/rock-play.svg" alt="ROCK">
+					</div>
+				</div>
+				<div class="name">PLAYER</div>
+			</div>
+		</main>
+	</div>
+	<div class="game-scores">
+		<div class="computer-score">
+			<div class="name">COMPUTER</div>
+			<br>
+			<div class="score"></div>
+		</div>
+		<div class="player-side">
+			<div class="score"></div>
+			<br>
+			<div class="name">PLAYER</div>
+		</div>
+	</div>
+	<!-- <img src="/resources/wheel.svg" alt=""> -->
+	<!-- <img src="/resources/paper-play.svg" alt="">
+	<img src="/resources/rock-play.svg" alt="">
+	<img src="/resources/scissors-play.svg" alt=""> -->
 	<script src="script.js"></script>
 </body>
 

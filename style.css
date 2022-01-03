@@ -1,21 +1,84 @@
+html {
+	margin: 0px;
+	padding: 0px;
+}
 body {
-	margin: 0%;
-	padding: 0%;
+	margin: 0px;
+	padding: 0px;
 	height: 100vh;
 	width: 100vw;
 }
 body {
-	background-color: black;
+	background-color: rgb(27, 27, 27);
 	display: flex;
+	align-content: space-around;
+	justify-content: space-evenly;
+}
+.playground {
+	margin: 10px 50px 10px;
+}
+.playground .name {
+	border: 5px solid white;
+	border-radius: 10px;
+	height: 40px;
+	font-size: 32px;
+	font-weight: bolder;
+	color: whitesmoke;
+}
+.computer-side {
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-end;
+	gap: 20px;
+}
+.wheel {
+	display: flex;
+	justify-items: center;
 	align-items: center;
-	justify-content: center;
+}
+.wheel img {
+	height: 300px;
+}
+.player-side {
+	height: 200px;
+}
+.player-controls {
+	display: flex;
+	flex-direction: row;
+	justify-items: space-around;
+}
+.player-controls img {
+	height: 150px;
+	width: 150px;
 }
 
-img {
-	height: 100px;
-	width: 100px;
-	transition: transform 20s linear;
+.game-scores {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	padding: 40px 5px;
 }
-img:hover {
-	transform: rotate(3600deg);
+.game-scores > div {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid white;
+}
+.game-scores .name {
+	height: 100px;
+	color: blanchedalmond;
+	font-weight: bolder;
+	font-size: larger;
+	text-align: right;
+}
+.game-scores .score {
+	height: 300px;
+}
+.game-scores br {
+	display: block;
+	height: 1px;
+	width: 100%;
+	border: 1px solid whitesmoke;
+	background-color: violet;
 }
